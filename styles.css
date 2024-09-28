@@ -1,1 +1,52 @@
 /*  your css code here. If applicable */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+  max-width: 1200px;
+  height: 80vh;
+}
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.panel h3 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+}
+
+.panel.active {
+  flex: 3;
+}
+
+.panel:not(.active) {
+  flex: 0.5;
+}
