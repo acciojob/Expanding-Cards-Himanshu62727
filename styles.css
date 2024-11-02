@@ -1,52 +1,53 @@
 /*  your css code here. If applicable */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
 }
-
 .container {
-  display: flex;
-  width: 90vw;
-  max-width: 1200px;
-  height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 90%;
+    overflow: hidden;
+    gap: 10px;
 }
-
 .panel {
-  background-size: cover;
-  background-position: center;
-  border-radius: 50px;
-  color: white;
-  cursor: pointer;
-  margin: 10px;
-  position: relative;
-  transition: flex 0.5s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+    /* flex: 1; */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: flex 0.5s ease-in-out;
 }
-
-.panel h3 {
-  font-size: 1rem;
-  text-transform: uppercase;
-  position: absolute;
-  bottom: 20px;
-  text-align: center;
+.panel img {
+    width: 100%;
+    border-radius: 15px;
+    height: 100%;
+    object-fit: cover;
 }
-
 .panel.active {
-  flex: 3;
+    flex: 5;
+    .img-text {
+        opacity: 1;
+        position: relative;
+        color: rgb(255, 255, 255);
+        bottom: 25px;
+        left: 10px;
+    }
+}
+.panel:not(.active) {
+    flex: 1;
 }
 
-.panel:not(.active) {
-  flex: 0.5;
+.img-text {
+    opacity: 0;
 }
